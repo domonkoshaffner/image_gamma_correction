@@ -51,7 +51,7 @@ int main()
         cl:: Kernel gamma(program, "gamma");
 
 // ############################################################################
-// Getting the degree of angle 
+// Getting the gamma value from the consol
         
         float gamma_val;
         std::cout << std::endl <<"Please enter the value of the gamma correction! \n" << std::endl;
