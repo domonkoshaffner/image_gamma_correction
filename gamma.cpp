@@ -53,9 +53,10 @@ int main()
 // ############################################################################
 // Getting the degree of angle 
         
-        float gamma_val = 0.5f;
-        //std::cout << "Please enter the angle of rotation in degrees! \n";
-        //std::cin >> angle;
+        float gamma_val;
+        std::cout << std::endl <<"Please enter the value of the gamma correction! \n" << std::endl;
+        std::cin >> gamma_val;
+        std::cout << std::endl<< "The value of the gamma correction is: " << gamma_val << std::endl;
  
 // Getting the name of the input file:
 
@@ -75,7 +76,7 @@ int main()
         }
         else
         {
-            std::cout << std::endl << "Image opened successfully." << "\n" << "\n";
+            std::cout << std::endl << "Image opened successfully." << "\n";
         }
 
         std::vector<color> input(width*height);
@@ -155,11 +156,11 @@ int main()
         int res = stbi_write_png("result.png", width, height, 4, tmp.data(), width*4);
         if (res == 0)
         {
-            std::cout << "Error writing utput to file\n";
+            std::cout << "Error writing utput to file.\n";
         }
         else
         {
-            std::cout << "Output written to file\n";
+            std::cout << "Output written to file successfully.\n";
         }        
 
 // ############################################################################

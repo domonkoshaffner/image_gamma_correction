@@ -7,7 +7,7 @@ __kernel void gamma(read_only image2d_t orig_im, write_only image2d_t new_im, sa
     int j = get_global_id(1);
 
 // Creating the 2D image objects
-// Saving the original coordinates in the new ones
+// Powering the pixels and saving them
 
     float4 pixel = read_imagef(orig_im, grid_sampler, (int2)(i,j));
     write_imagef(new_im, (int2)(i,j), pow(pixel, gamma_val));
